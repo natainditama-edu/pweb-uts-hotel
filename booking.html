@@ -97,7 +97,11 @@ function hitungTotal() {
 
 // tombol reservasi
 function lanjutReservasi() {
-  alert("Reservasi berhasil! 🎉 (simulasi dulu)");
+  const tipe = document.getElementById("tipeKamar").value;
+  const total = document.getElementById("total").innerText;
+
+  window.location.href = 
+    `booking-form.html?tipe=${encodeURIComponent(tipe)}&total=${encodeURIComponent(total)}`;
 }
 </script>
 
