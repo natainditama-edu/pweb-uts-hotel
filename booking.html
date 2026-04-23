@@ -82,19 +82,8 @@ function hitungTotal() {
     return;
   }
 
-  let total = harga * malam * kamar;
-
-  let format = new Intl.NumberFormat("id-ID", {
-    style: "currency",
-    currency: "IDR"
-  });
-
-  document.getElementById("total").innerText = format.format(total);
-
-  // tampilkan tombol reservasi
-  document.getElementById("btnReservasi").style.display = "block";
-}
-
+  let total = calculateTotalPrice(harga, malam, kamar);
+  
 // tombol reservasi
 function lanjutReservasi() {
   const tipe = document.getElementById("tipeKamar").value;
